@@ -1,14 +1,16 @@
 <section>
-            <script type="text/javascript">
+    <script type="text/javascript">
             function dashangToggle(){
               $(".hide_box-play").fadeToggle();
               $(".shang_box-play").fadeToggle();
             }
-            </script>
 
-            <div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';"></div>
 
-            <style type="text/css">
+    </script>
+
+    <div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';"></div>
+
+    <style type="text/css">
               .hide_box-play{z-index:999;filter:alpha(opacity=50);background:#666;opacity: 0.5;-moz-opacity: 0.5;left:0;top:0;height:99%;width:100%;position:fixed;display:none;}
               .shang_box-play{width:540px;height:540px;padding:10px;background-color:#fff;border-radius:10px;position:fixed;z-index:1000;left:50%;top:50%;margin-left:-280px;margin-top:-280px;border:1px dotted #dedede;display:none;}
               .shang_box-play img{border:none;border-width:0;}
@@ -27,18 +29,22 @@
               .shang_payselect .pay_item{display:inline-block;margin-right:140px;float:left;}
               .shang_info-play{clear:both;}
               .shang_info-play p,.shang_info-play a{color:#C3C3C3;text-align:center;font-size:12px;text-decoration:none;line-height:2em;}
-            </style>
 
-       <ul class="pager">
+
+    </style>
+
+    <ul class="pager">
         {% if page.previous.url %}
         <li class="previous">
-            <a href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.previous.title}}">上一篇：  <span>{{page.previous.title}}</span>
+            <a data-placement="top" data-toggle="tooltip"
+               href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" title="{{page.previous.title}}">上一篇： <span>{{page.previous.title}}</span>
             </a>
         </li>
         {% endif %}
         {% if page.next.url %}
         <li class="next">
-            <a href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.next.title}}">下一篇：  <span>{{page.next.title}}</span>
+            <a data-placement="top" data-toggle="tooltip"
+               href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}" title="{{page.next.title}}">下一篇： <span>{{page.next.title}}</span>
             </a>
         </li>
         {% endif %}
