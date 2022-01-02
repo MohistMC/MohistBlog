@@ -8,7 +8,7 @@ avatarTitle: MohistMC
 avatarDesc: java / minecraft
 url: "https://MohistMC.cn"
 
-# 博客是否自动生成目录，false为不生成
+# 博客是否自动生成Contents，false为不生成
 enableToc: true
 
 permalink: /:year/:month/:title/
@@ -22,11 +22,11 @@ cover_color: clear
 
 # The blog button should not be removed.
 blog_button:
-    title: 博客主页
+    title: Blog Home
 
 # Navigation buttons in the front page.s
 nav:
-    - {title: 所有文章, description: archive, url: '/archive'}
+    - {title: All articles, description: archive, url: '/archive'}
     
 
 # Pagination
