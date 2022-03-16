@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html>
 
-{% include head.html %}
+  {% include head.html %}
 
-<body>
+  <body>
 
-<span class="mobile btn-mobile-menu">
+    <span class="mobile btn-mobile-menu">        
       <div class="nav_container">
-         <nav class="nav-menu-item" style="float:right">
+         <nav class="nav-menu-item" style = "float:right">
             <i class="nav-menu-item">
-              <a class="blog-button" href="/#blog" title="{{site.blog_button.description}}">  {{site.blog_button.title}}
+              <a href="/#blog" title="{{site.blog_button.description}}" class="blog-button">  {{site.blog_button.title}}
               </a>
             </i>
             {% for item in site.nav %}
                 <i class="nav-menu-item">
 
-                  <a class="btn-mobile-menu__icon" href="{{item.url}}" title="{{item.description}}">
+                  <a href="{{item.url}}" title="{{item.description}}" class="btn-mobile-menu__icon">
                       {{item.title}}
                   </a>
                 </i>
@@ -23,18 +23,18 @@
           </nav>
       </div>
     </span>
+    
+    {% include side-panel.html %}
 
-{% include side-panel.html %}
-
-<div class="content-wrapper">
-    <div class="content-wrapper__inner">
-        {{ content }}
-        {% include footer.html %}
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner">
+            {{ content }}
+            {% include footer.html %}
+        </div>
     </div>
-</div>
-
-{% include external.html %}
-
-</body>
+    
+    {% include external.html %}
+    
+  </body>
 
 </html>
